@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "langchain-shell"
+version = "0.1.0"
+description = ""
+authors = ["Keith Hanson <keith@keithhanson.io>"]
+readme = "README.md"
+packages = [{include = "langchain_shell"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
