@@ -1,13 +1,16 @@
 [tool.poetry]
 name = "langchain-shell"
 version = "0.1.0"
-description = ""
+description = "A shell/REPL for the LangChain programming language."
 authors = ["Keith Hanson <keith@keithhanson.io>"]
 readme = "README.md"
 packages = [{include = "langchain_shell"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+langchain = "^0.0.161"
+typer = "^0.9.0"
+openai = "^0.27.6"
 
 
 [build-system]
@@ -15,4 +18,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-langchain-shell = "langchain_shell.main:main"
+langchain-shell = "langchain_shell.main:__main__"
