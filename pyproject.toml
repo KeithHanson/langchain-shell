@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "langchain-shell"
-version = "0.1.0"
+version = "0.1.1"
 description = "A shell/REPL for the LangChain programming language."
 authors = ["Keith Hanson <keith@keithhanson.io>"]
 readme = "README.md"
