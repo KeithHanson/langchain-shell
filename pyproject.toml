@@ -11,6 +11,7 @@ python = "^3.10"
 langchain = "^0.0.161"
 typer = "^0.9.0"
 openai = "^0.27.6"
+textual = {extras = ["dev"], version = "^0.23.0"}
 
 
 [build-system]
@@ -18,4 +19,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-langchain-shell = "langchain_shell.main:__main__"
+langchain-shell = "langchain_shell.main:main"

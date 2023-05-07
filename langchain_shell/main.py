@@ -14,6 +14,8 @@ from langchain.prompts import (
 from langchain.chains import ConversationChain
 from langchain.chat_models import ChatOpenAI
 
+from ui.app import LangChainShellApp
+
 prompt = ChatPromptTemplate.from_messages([
     SystemMessagePromptTemplate.from_template("The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know."),
     MessagesPlaceholder(variable_name="history"),
@@ -23,8 +25,13 @@ prompt = ChatPromptTemplate.from_messages([
 llm = ChatOpenAI(temperature=0)
 memory = ConversationBufferMemory(return_messages=True)
 
-def main(list_agents: bool = False, agent: str = "LLMSingleActionAgent", verbose: bool = False, list_tools: bool = False):
+def main(ui: bool = True, list_agents: bool = False, agent: str = "LLMSingleActionAgent", verbose: bool = False, list_tools: bool = False):
     """Langchain: A tool for automating language tasks"""
+    if ui:
+        app = LangChainShellApp()
+        app.run()
+        return
+
     if list_agents:
         known_agents()
         return
