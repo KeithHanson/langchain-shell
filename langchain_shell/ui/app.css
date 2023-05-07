@@ -1,3 +1,25 @@
+Screen {
+}
+
+#left {
+  width: 1fr;
+  background: green;
+}
+
+#content {
+  width: 3fr;
+}
+
+#right-top {
+  height: 10fr;
+  background: pink;
+}
+
+#right-bottom {
+  height: 1fr;
+  background: orange;
+}
+
 QuitScreen {
     align: center middle;
 }
